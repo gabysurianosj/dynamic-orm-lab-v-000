@@ -21,7 +21,16 @@ class InteractiveRecord
     column_names.compact
   end
   
-  def 
+  def initialize(objects={})
+    objects.each do |k, v|
+      self.send("#{k}=", v)
+    end 
+  end 
+  
+  #save - insert into students 
+  
+  def save 
+    sql = <<-SQL
   
   
 end
